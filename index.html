@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ar-Condicionado</title>
+    <script src="./teste.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <!-- On/Off -->
+        <label class="switch-button" for="switch">
+            <div class="switch-outer">
+                <input id="switch" type="checkbox" onchange="onOff()">
+                <div class="button">
+                    <span class="button-toggle"></span>
+                    <span class="button-indicator"></span>
+                </div>
+            </div>
+        </label>
+        <!-- Fan Speed -->
+        <div class="tab-container">
+            <input type="radio" name="tab" id="AUTO" class="tab tab--1" onchange="fanSpeedMode('AUTO')" />
+            <label class="tab_label" for="AUTO">AUTO</label>
+
+            <input type="radio" name="tab" id="HIGH" class="tab tab--2" onchange="fanSpeedMode('HIGH')" />
+            <label class="tab_label" for="HIGH">HIGH</label>
+
+            <input type="radio" name="tab" id="MID" class="tab tab--3" onchange="fanSpeedMode('MID')" />
+            <label class="tab_label" for="MID">MID</label>
+
+            <input type="radio" name="tab" id="LOW" class="tab tab--4" onchange="fanSpeedMode('LOW')" />
+            <label class="tab_label" for="LOW">LOW</label>
+
+            <div id="indicator"></div>
+        </div>
+        <p>Fan Speed</p>
+        <!-- Display -->
+        <div id="temp">
+            <button class="temp-button" onclick="changeTemp(-1)">-</button>
+
+            <div id="sha_app">
+
+                <!-- Start Section Body 1 -->
+                <section onclick="" id="sha_temp_body">
+                    <div>
+                        <div>
+                            <span class="sha_temp">
+                                <span>
+                                    <span class="temp-data"></span>
+
+                                    <span class="temp-info"></span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Section Body 1 -->
+
+            </div>
+
+            <button class="temp-button" onclick="changeTemp(1)">+</button>
+        </div>
+        <!-- Mode Control -->
+        <div class="radio-input">
+            <label>
+                <input value="Feel" name="value-radio" id="Feel" type="radio" onchange="modeChange('Feel')">
+                <span>FEEL</span>
+            </label>
+            <label>
+                <input value="Cooling" name="value-radio" id="Cooling" type="radio" onchange="modeChange('Cooling')">
+                <span>COOL</span>
+            </label>
+            <label>
+                <input value="Dry" name="value-radio" id="Dry" type="radio" onchange="modeChange('Dry')">
+                <span>DRY</span>
+            </label>
+            <label>
+                <input value="Fan" name="value-radio" id="Fan" type="radio" onchange="modeChange('Fan')">
+                <span>FAN</span>
+            </label>
+            <label>
+                <input value="Heat" name="value-radio" id="Heat" type="radio" onchange="modeChange('Heat')">
+                <span>HEAT</span>
+            </label>
+            <span class="selection"></span>
+        </div>
+        <!-- Swing Switch -->
+        <div class="switch-holder">
+            <div class="switch-label">
+                <span>SWING</span>
+            </div>
+            <div class="switch-toggle">
+                <input type="checkbox" id="swing" onchange="swingOnOff()">
+                <label for="swing"></label>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
